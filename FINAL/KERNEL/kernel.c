@@ -1,9 +1,5 @@
 #include"VGA_driv.c"
 #include"memory.c"
-#include"idt.c"
-#include"isr.c"
-#include"irq.c"
-#include"gdt.h"
 #include"shell.c"
 
 extern void _kpanic(struct regs* r)
@@ -14,13 +10,6 @@ extern void _kpanic(struct regs* r)
 extern void _main()
 {
     kClearScreen();
-    GDT_Init();
-    //init_paging();
-    /*idt_install();
-    isrs_install();
-    irq_install();
-    asm volatile ("sti");*/
-    //timer_install();
     initializeMem();
     SetCursorPos(0, 0);
     char FirstStringtest[28] = {'T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 't', 'e', 's', 't', ' ', 'o', 'f', ' ','t', 'h', 'e', ' ', 's', 'y', 's', 't', 'e', 'm'};
