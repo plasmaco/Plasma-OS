@@ -24,7 +24,6 @@ disk_read_error:
 	mov bh, ah
 	call print_dec
 	jmp $
-
 BOOT_DISK:
 	db 0x00
 
