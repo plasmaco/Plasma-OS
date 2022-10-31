@@ -4,9 +4,13 @@ echo Compiling
 
 COLOR 6
 
-gcc -ffreestanding -m32 -g -c kernel.c -o kernel.o
+nasm boot.asm -f bin -o boot.bin
 
-gcc -ffreestanding -m32 -g -c gdt.c -o gdtc.o
+nasm kernel_entry.asm -f elf -o kernel_entry.o
+
+echo NASM Compiled
+
+gcc -ffreestanding -m32 -g -c kernel.c -o kernel.o
 
 echo GCC Compiled
 
@@ -17,6 +21,10 @@ COLOR C
 ld -T NUL -o kernel.tmp -Ttext 0x1000 kernel_entry.o kernel.o gdt.o gdtc.o
 
 objcopy -O binary -j .text kernel.tmp kernel.bin
+
+cat boot.bin kernel.bin > raw.bin
+
+cat raw.bin zero.bin > plasmaos.bin
 
 echo Finished linking
 
