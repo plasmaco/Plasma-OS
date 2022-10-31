@@ -43,3 +43,4 @@ print_digit:
 	add al, 48
 	int 0x10
 	ret
+	
