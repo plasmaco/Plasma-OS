@@ -4,4 +4,5 @@ enter_protected_mode:
 	mov eax, cr0
 	or al, 0x01
 	mov cr0, eax
-	jmp CODE_SEG:_main32
+	jmp CODE_SEG:_ma
+	in32
