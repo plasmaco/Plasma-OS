@@ -10,10 +10,3 @@ global MemSize
 call __main
 
 jmp $
-
-%include "../CPU/oldin.asm"
-%include "../Paging/paging.asm"
-
-section .rodata
-
-%include "IncBins.asm"
