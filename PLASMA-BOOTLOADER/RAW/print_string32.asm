@@ -18,3 +18,4 @@ print_string32:
 		jmp .loop
 	.end:
 		ret
+		
