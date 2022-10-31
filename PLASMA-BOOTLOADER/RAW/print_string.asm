@@ -9,4 +9,3 @@ print_string:
 		jmp .loop
 	.end:
 		ret
-Footer
