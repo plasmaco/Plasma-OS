@@ -21,8 +21,5 @@ RELEASED THE SYSTEM!
 
 
 # CREDITS
-_Thanks to our developers for working on the system!
-gabmeow: Senior Developer and founder of Plasma Company
-Cora: Developer working on the system
-FedEx: Developer working on the system
-Want to help us? [Join the Plasma Discord Server](https://discord.gg/92RFjFyFHH)_
+@gabmeow: [Gabmeow](https://github.com/gabmeow)
+_Want to help us? [Join the Plasma Discord Server](https://discord.gg/92RFjFyFHH)_
