@@ -1,6 +1,6 @@
 #include"../DRIVER/VGA_driv.c"
-#include"../DRIVER/memory.c"
-#include"../DRIVER/shell.c"
+#include"../MEMORY/memory.c"
+#include"../SHELL/shell.c"
 
 extern void _kpanic(struct regs* r)
 {
